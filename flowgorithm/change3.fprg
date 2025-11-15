@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="change3"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-14 09:15:33 p.&#160;m."/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0xNDswMjowOTozNSBwLsKgbS47Mjk2OQ=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0xNDswOToxNTozMyBwLsKgbS47MTszMDc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lan1, lan2, lan3, lan4, lan5, lan6" type="Integer" array="False" size=""/>
+            <declare name="lanzamiento, contador, dado" type="Integer" array="False" size=""/>
+            <assign variable="lan1" expression="0"/>
+            <assign variable="lan2" expression="0"/>
+            <assign variable="lan3" expression="0"/>
+            <assign variable="lan4" expression="0"/>
+            <assign variable="lan5" expression="0"/>
+            <assign variable="lan6" expression="0"/>
+            <output expression="&quot;ingresa el n&#250;mero de veces que quieres lanzar:&quot;" newline="True"/>
+            <input variable="lanzamiento"/>
+            <for variable="contador" start="1" end="lanzamiento" direction="inc" step="1">
+                <assign variable="dado" expression="Random(6) + 1"/>
+                <if expression="dado = 1">
+                    <then>
+                        <assign variable="lan1" expression="lan1 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado = 2">
+                    <then>
+                        <assign variable="lan2" expression="lan2 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado = 3">
+                    <then>
+                        <assign variable="lan3" expression="lan3 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado = 4">
+                    <then>
+                        <assign variable="lan4" expression="lan4 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado =  5">
+                    <then>
+                        <assign variable="lan5" expression="lan5 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado = 6">
+                    <then>
+                        <assign variable="lan6" expression="lan6 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Resultados:&quot;" newline="True"/>
+            <output expression="&quot;1:&quot;" newline="True"/>
+            <output expression="lan1" newline="True"/>
+            <output expression="&quot;2:&quot;" newline="True"/>
+            <output expression="lan2" newline="True"/>
+            <output expression="&quot;3:&quot;" newline="True"/>
+            <output expression="lan3" newline="True"/>
+            <output expression="&quot;4:&quot;" newline="True"/>
+            <output expression="lan4" newline="True"/>
+            <output expression="&quot;5:&quot;" newline="True"/>
+            <output expression="lan5" newline="True"/>
+            <output expression="&quot;6:&quot;" newline="True"/>
+            <output expression="lan6" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
