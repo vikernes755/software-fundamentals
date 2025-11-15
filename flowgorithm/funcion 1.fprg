@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="funcion 1"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-09 10:02:02 a.&#160;m."/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0wOTswODoxNzoxMSBhLsKgbS47Mjk1Nw=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0wOTsxMDowMjowMiBhLsKgbS47MTszMDUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;hello, This is my first function. This is amazing&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="ShowMessage" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+</flowgorithm>
