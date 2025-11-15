@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="change2"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-14 10:57:03 a.&#160;m."/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0xNDsxMDozNToyNCBhLsKgbS47Mjk1MA=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0xNDsxMDo1NzowMyBhLsKgbS47MTszMDU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="suma, dado, contador, lanzamiento" type="Integer" array="False" size=""/>
+            <output expression="&quot;Cuantas veces quieres lanzar el dado&quot;" newline="True"/>
+            <input variable="lanzamiento"/>
+            <assign variable="suma" expression="0"/>
+            <for variable="contador" start="1" end="lanzamiento" direction="inc" step="1">
+                <assign variable="dado" expression="Random(6) + 1"/>
+                <output expression="contador" newline="True"/>
+                <assign variable="suma" expression="suma + dado"/>
+            </for>
+            <output expression="&quot;lasuma total es&quot;" newline="True"/>
+            <output expression="suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
