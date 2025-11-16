@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto_condicional1"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 10:35:43 p.&#160;m."/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0xNTswNDo0MzoxNSBwLsKgbS47Mjk2OA=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0xNTsxMDozNTo0MyBwLsKgbS47MTszMDc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1, dado2" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="RANDOM(6)+ 1"/>
+            <assign variable="dado2" expression="random(6)+1"/>
+            <output expression="&quot;Dace 1: &quot; &amp; dado1  &amp; &quot; Dace 2: &quot; &amp; dado2" newline="True"/>
+            <if expression="dado1 = dado2">
+                <then>
+                    <output expression="&quot;YOU WIN&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado1 % 2 = 0">
+                <then>
+                    <output expression="&quot;Dace 1: PAR&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dace 1: IMPAR&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado2 % 2 = 0">
+                <then>
+                    <output expression="&quot;Dace 2: PAR&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dace 2: IMPAR&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
