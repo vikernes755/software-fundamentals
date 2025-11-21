@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_5"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-20 11:02:57 p.&#160;m."/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0yMDsxMDoxNjoxMiBwLsKgbS47Mjk1OA=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0yMDsxMTowMjo1NyBwLsKgbS47MTszMDcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tipoid, nombres, apellidos, genero, direccion, telefono" type="String" array="False" size=""/>
+            <declare name="a&#241;odenacimiento" type="Integer" array="False" size=""/>
+            <declare name="salario, aumento, salariofinal" type="Real" array="False" size=""/>
+            <output expression="&quot;Tipo de identificaci&#243;n (CC, PS, CE, CI):&quot;" newline="True"/>
+            <input variable="tipoid"/>
+            <output expression="&quot;Nombres:&quot;" newline="True"/>
+            <input variable="nombres"/>
+            <output expression="&quot;Apellidos:&quot;" newline="True"/>
+            <input variable="apellidos"/>
+            <output expression="&quot;G&#233;nero (M/F):&quot;" newline="True"/>
+            <input variable="genero"/>
+            <output expression="&quot;A&#241;o de nacimiento:&quot;" newline="True"/>
+            <input variable="a&#241;odenacimiento"/>
+            <output expression="&quot;Direcci&#243;n:&quot;" newline="True"/>
+            <input variable="direccion"/>
+            <output expression="&quot;Tel&#233;fono:&quot;" newline="True"/>
+            <input variable="telefono"/>
+            <output expression="&quot;Salario:&quot;" newline="True"/>
+            <input variable="salario"/>
+            <if expression="salario &lt;= 1200000">
+                <then>
+                    <if expression="genero = &quot;F&quot; OR genero = &quot;f&quot;">
+                        <then>
+                            <assign variable="aumento" expression="salario * 0.10"/>
+                        </then>
+                        <else>
+                            <assign variable="aumento" expression="salario * 0.08"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="salario &lt; 2000000">
+                        <then>
+                            <assign variable="aumento" expression="salario * 0.05"/>
+                        </then>
+                        <else>
+                            <if expression="genero = &quot;F&quot; OR genero = &quot;f&quot;">
+                                <then>
+                                    <assign variable="aumento" expression="salario * 0.03"/>
+                                </then>
+                                <else>
+                                    <assign variable="aumento" expression="salario * 0.025"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="salariofinal" expression="salario + aumento"/>
+            <output expression="&quot;Salario inicial: &quot;  &amp; salario" newline="True"/>
+            <output expression="&quot;Aumento aplicado: &quot; &amp; aumento" newline="True"/>
+            <output expression="&quot;Salario final: &quot; &amp; salariofinal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
