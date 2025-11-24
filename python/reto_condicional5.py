@@ -26,7 +26,7 @@ else:  # salario >= 2000000
 
 salario_final = salario + aumento
 
-print("\n------ RESULTADOS ------")
+print("------ RESULTADOS ------")
 print("Nombre:", nombres, apellidos)
 print("Salario inicial:", salario)
 print("Aumento aplicado:", aumento)
