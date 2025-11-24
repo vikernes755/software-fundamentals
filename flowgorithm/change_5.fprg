@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+  <attributes>
+    <attribute name="name" value="challenge_5"/>
+    <attribute name="authors" value="ASUS"/>
+    <attribute name="about" value="Contar pares e impares"/>
+  </attributes>
+  <script>
+    <declare name="dado1" type="Integer"/>
+    <declare name="contador" type="Integer"/>
+    <declare name="lanzamiento" type="Integer"/>
+    <declare name="pares" type="Integer"/>
+    <declare name="impares" type="Integer"/>
+  </script>
+  <start/>
+  <assignment variable="pares" expression="0"/>
+  <assignment variable="impares" expression="0"/>
+  <output expression="&quot;¿Cuántas veces quieres lanzar los dados?&quot;"/>
+  <input variable="lanzamiento"/>
+  <for variable="contador" start="1" end="lanzamiento" step="1">
+    <body>
+      <assignment variable="dado1" expression="Random(6) + 1"/>
+      <output expression="&quot;Lanzamiento &quot; + ToString(contador) + &quot;: &quot; + ToString(dado1)"/>
+      <if expression="dado1 % 2 = 0">
+        <body>
+          <assignment variable="pares" expression="pares + 1"/>
+        </body>
+        <else>
+          <body>
+            <assignment variable="impares" expression="impares + 1"/>
+          </body>
+        </else>
+      </if>
+    </body>
+  </for>
+  <output expression="&quot;-----------------------------&quot;"/>
+  <output expression="&quot;Total tiros PARES: &quot; + ToString(pares)"/>
+  <output expression="&quot;Total tiros IMPARES: &quot; + ToString(impares)"/>
+  <end/>
+</flowgorithm>
