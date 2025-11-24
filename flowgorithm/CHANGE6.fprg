@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="CHANGE6"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-24 08:33:15 a.&#160;m."/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0yNDswNzozMDo1NSBhLsKgbS47Mjk1Ng=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNEtBUkRKUTQ7MjAyNS0xMS0yNDswODozMzoxNSBhLsKgbS47MTszMDY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pares, impares, sumatiros, totaltiros, tiro" type="Real" array="False" size=""/>
+            <assign variable="totaltiros" expression="0"/>
+            <assign variable="sumatiros" expression="0"/>
+            <assign variable="pares" expression="0"/>
+            <assign variable="impares" expression="0"/>
+            <declare name="continuar" type="String" array="False" size=""/>
+            <assign variable="continuar" expression="&quot;SI&quot;"/>
+            <assign variable="continuar" expression="&quot;SI&quot;"/>
+            <while expression="NOT (continuar = &quot;no&quot; OR  continuar = &quot;NO&quot;)">
+                <assign variable="tiro" expression="random(7)"/>
+                <output expression="&quot;sacaste: &quot; &amp; tiro" newline="True"/>
+                <assign variable="totaltiros" expression="totaltiros + 1"/>
+                <assign variable="sumatiros" expression="sumatiros + tiro"/>
+                <if expression="tiro % 2 = 0">
+                    <then>
+                        <assign variable="pares" expression="pares + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="impares" expression="impares + 1"/>
+                    </else>
+                </if>
+                <output expression="&quot;&#191;Deseas lanzar de nuevo? (SI/NO): &quot;" newline="True"/>
+                <input variable="continuar"/>
+            </while>
+            <output expression="&quot;Total de tiros efectuados:&quot; &amp; totaltiros" newline="True"/>
+            <output expression="&quot;Suma total de los tiros:&quot; &amp; sumatiros" newline="True"/>
+            <output expression="&quot;Total de pares:&quot; &amp; pares" newline="True"/>
+            <output expression="&quot;Total de impares:&quot; &amp; impares" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
